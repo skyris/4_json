@@ -1,11 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 import json
 import os
-from pprint import PrettyPrinter
-from sys import argv, exit
+from sys import argv
 
 
 def load_data(filepath):
@@ -18,8 +13,7 @@ def load_data(filepath):
 
 
 def pretty_print_json(data):
-    pp = PrettyPrinter(indent=4)
-    pp.pprint(data)
+    print(json.dumps(data, ensure_ascii=False, sort_keys=True, indent=4))
 
 
 if __name__ == '__main__':
